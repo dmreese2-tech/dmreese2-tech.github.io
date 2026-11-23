@@ -1,80 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Upstage Systems</title>
+<title>Applications · Upstage Systems</title>
+<meta name="description" content="Browser-based tools for community theater design and planning.">
+<meta name="theme-color" content="#0B0E11">
+<link rel="icon" type="image/svg+xml" href="/assets/logos/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/logos/app-icon-square.svg">
+<link rel="preload" href="/assets/fonts/oswald-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/upstage.css">
 <style>
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background: #0f1115;
-    color: #e8e8e8;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-  }
-  .wrap { max-width: 640px; width: 100%; }
-  h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.25rem;
-    letter-spacing: -0.02em;
-  }
-  p.sub {
-    color: #9aa0a6;
-    margin-top: 0;
-    margin-bottom: 2rem;
-  }
-  .apps { display: grid; gap: 1rem; }
-  a.app-card {
-    display: block;
-    padding: 1.25rem 1.5rem;
-    background: #1a1d24;
-    border: 1px solid #2a2e37;
-    border-radius: 10px;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.15s ease, transform 0.15s ease;
-  }
-  a.app-card:hover {
-    border-color: #4a90d9;
-    transform: translateY(-1px);
-  }
-  .app-name { font-weight: 600; font-size: 1.05rem; }
-  .app-desc { color: #9aa0a6; font-size: 0.9rem; margin-top: 0.25rem; }
-  footer {
-    margin-top: 3rem;
-    color: #55595f;
-    font-size: 0.8rem;
-  }
+  .page { max-width: 1040px; margin: 0 auto; padding: var(--space-6) var(--space-4) var(--space-7); }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4);
+         padding-bottom: var(--space-5); border-bottom: 1px solid var(--border); }
+  .top img { display: block; height: 44px; width: auto; }
+  .top .label { text-align: right; }
+  .hero { padding: var(--space-7) 0 var(--space-6); }
+  .hero .label { margin: 0 0 var(--space-3); }
+  h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(36px, 7vw, 60px);
+       line-height: 1.07; letter-spacing: .02em; text-transform: uppercase; margin: 0 0 var(--space-4); text-wrap: balance; }
+  .lead { font-size: 18px; line-height: 28px; color: var(--text-muted); max-width: 52ch; margin: 0; }
+  .apps { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
+  @media (min-width: 640px) { .apps { grid-template-columns: repeat(2, 1fr); } }
+  .us-card { min-height: 168px; }
+  footer { margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid var(--border);
+           display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); color: var(--text-muted); }
+  footer img { height: 28px; width: auto; display: block; opacity: .9; }
+  .us-card__foot .data-sm, footer .data-sm { color: var(--text-muted); }
+  @media (max-width: 520px) { .top img { height: 36px; } .hero { padding-top: var(--space-6); } }
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>Upstage Systems</h1>
-    <p class="sub">Tools for community theater design &amp; planning.</p>
-    <div class="apps">
-      <a class="app-card" href="/stage-designer/">
-        <div class="app-name">Stage Designer</div>
-        <div class="app-desc">Set &amp; lighting design tool for the Burgdorff Center for the Performing Arts.</div>
+  <div class="page">
+    <header class="top">
+      <a href="/" aria-label="Upstage Systems home"><img src="/assets/logos/lockup-horizontal-on-dark.svg" alt="Upstage Systems" width="297" height="84"></a>
+      <span class="label">Applications</span>
+    </header>
+
+    <section class="hero">
+      <p class="label">Stage tools</p>
+      <h1>Tools for community theater</h1>
+      <p class="lead">Design, planning and cueing tools that run in the browser, built for crews working in low light.</p>
+    </section>
+
+    <main class="apps">
+      <a class="us-card" href="/stage-designer/">
+        <h2 class="us-card__title">Stage Designer</h2>
+        <p class="us-card__body">Set &amp; lighting design tool for the Burgdorff Center for the Performing Arts.</p>
+        <div class="us-card__foot"><span class="data-sm">/stage-designer</span><span class="label us-card__open">Open &rarr;</span></div>
       </a>
-      <a class="app-card" href="/solari-board/">
-        <div class="app-name">Solari Board</div>
-        <div class="app-desc">Split-flap style display board.</div>
+      <a class="us-card" href="/solari-board/">
+        <h2 class="us-card__title">Solari Board</h2>
+        <p class="us-card__body">Split-flap style display board.</p>
+        <div class="us-card__foot"><span class="data-sm">/solari-board</span><span class="label us-card__open">Open &rarr;</span></div>
       </a>
-      <a class="app-card" href="/cue-flash/">
-        <div class="app-name">Cue Flash</div>
-        <div class="app-desc">Sends silent cues to a screen backstage or onstage — no more holding up cue cards.</div>
+      <a class="us-card" href="/cue-flash/">
+        <h2 class="us-card__title">Cue Flash</h2>
+        <p class="us-card__body">Sends silent cues to a screen backstage or onstage — no more holding up cue cards.</p>
+        <div class="us-card__foot"><span class="data-sm">/cue-flash</span><span class="label us-card__open">Open &rarr;</span></div>
       </a>
-      <a class="app-card" href="/tern-amb-mixer/">
-        <div class="app-name">Tern Amb Mixer</div>
-        <div class="app-desc">Mixing generator for terminal ambient sounds.</div>
+      <a class="us-card" href="/tern-amb-mixer/">
+        <h2 class="us-card__title">Tern Amb Mixer</h2>
+        <p class="us-card__body">Mixing generator for terminal ambient sounds.</p>
+        <div class="us-card__foot"><span class="data-sm">/tern-amb-mixer</span><span class="label us-card__open">Open &rarr;</span></div>
       </a>
-    </div>
-    <footer>apps.upstage.systems</footer>
+    </main>
+
+    <footer>
+      <span class="data-sm">apps.upstage.systems</span>
+      <img src="/assets/logos/mark-on-dark.svg" alt="" width="37" height="28">
+    </footer>
   </div>
 </body>
 </html>
