@@ -1,0 +1,35 @@
+/* Upstage Systems: tokens (dark theme) + components. Source: Upstage Systems design system. */
+@font-face{font-family:"Oswald";font-weight:500;font-display:swap;src:url(fonts/oswald-500.woff2) format("woff2")}
+@font-face{font-family:"Oswald";font-weight:600;font-display:swap;src:url(fonts/oswald-600.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:400;font-display:swap;src:url(fonts/inter-400.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:500;font-display:swap;src:url(fonts/inter-500.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:600;font-display:swap;src:url(fonts/inter-600.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-weight:400;font-display:swap;src:url(fonts/plex-mono-400.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Mono";font-weight:500;font-display:swap;src:url(fonts/plex-mono-500.woff2) format("woff2")}
+
+:root{
+  --bg:#0B0E11;--bg-raised:#12161B;--surface:#181D24;--surface-hover:#1D232B;
+  --border:#2A323C;--border-strong:#3C4A58;
+  --text:#EDEFF2;--text-muted:#8A94A3;--text-faint:#5B6472;
+  --accent:#E8A33D;--accent-text:#E8A33D;--signal:#00A8E8;--signal-text:#00A8E8;
+  --focus:#E8A33D;--on-accent:#0B0E11;--blueprint:#5B7A8C;
+  --font-display:"Oswald","Arial Narrow",sans-serif;
+  --font-sans:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --space-1:4px;--space-2:8px;--space-3:12px;--space-4:16px;--space-5:24px;--space-6:32px;--space-7:48px;--space-8:64px;
+  --radius-sm:2px;--radius-md:4px;--radius-lg:8px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-sans);font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased}
+a:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+
+.us-card{display:flex;flex-direction:column;background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:var(--radius-md);padding:var(--space-4);text-decoration:none;transition:background 120ms ease-out,border-color 120ms ease-out}
+.us-card:hover{background:var(--surface-hover);border-color:var(--border-strong)}
+.us-card__title{font-family:var(--font-display);font-weight:600;font-size:20px;line-height:24px;letter-spacing:.02em;text-transform:uppercase;margin:0 0 var(--space-2)}
+.us-card__body{margin:0;font-size:14px;line-height:20px;color:var(--text-muted)}
+.us-card__foot{margin-top:auto;padding-top:var(--space-4);display:flex;justify-content:space-between;align-items:center}
+.label{font-family:var(--font-display);font-weight:500;font-size:12px;line-height:16px;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted)}
+.data-sm{font-family:var(--font-mono);font-weight:500;font-size:12px;line-height:16px}
+.us-card:hover .us-card__open{color:var(--text)}
