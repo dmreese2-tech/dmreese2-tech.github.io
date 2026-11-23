@@ -23,7 +23,8 @@
   .lead { font-size: 18px; line-height: 28px; color: var(--text-muted); max-width: 52ch; margin: 0; }
   .apps { display: grid; gap: var(--space-5); grid-template-columns: 1fr; }
   @media (min-width: 640px) { .apps { grid-template-columns: repeat(2, 1fr); } }
-  .us-card { min-height: 168px; }
+  .us-card { min-height: 220px; }
+  .us-card__logo { height: 40px; width: auto; max-width: 100%; align-self: flex-start; margin-bottom: var(--space-4); }
   footer { margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid var(--border);
            display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); color: var(--text-muted); }
   footer img { height: 28px; width: auto; display: block; opacity: .9; }
@@ -46,26 +47,31 @@
 
     <main class="apps">
       <a class="us-card" href="/stage-designer/">
+        <img class="us-card__logo" src="/assets/logos/stage-designer-mark-on-dark.svg" alt="" width="48" height="40">
         <h2 class="us-card__title">Stage Designer</h2>
         <p class="us-card__body">Set &amp; lighting design tool for the Burgdorff Center for the Performing Arts.</p>
         <div class="us-card__foot"><span class="data-sm">/stage-designer</span><span class="label us-card__open">Open &rarr;</span></div>
       </a>
       <a class="us-card" href="/solari-board/">
+        <img class="us-card__logo" src="/assets/logos/mark-on-dark.svg" alt="" width="48" height="40">
         <h2 class="us-card__title">Solari Board</h2>
         <p class="us-card__body">Split-flap style display board.</p>
         <div class="us-card__foot"><span class="data-sm">/solari-board</span><span class="label us-card__open">Open &rarr;</span></div>
       </a>
       <a class="us-card" href="/cue-flash/">
-        <h2 class="us-card__title">Cue Flash</h2>
+        <img class="us-card__logo" src="/assets/logos/cuecontrol-mark-on-dark.svg" alt="" width="48" height="40">
+        <h2 class="us-card__title">CueControl</h2>
         <p class="us-card__body">Sends silent cues to a screen backstage or onstage — no more holding up cue cards.</p>
         <div class="us-card__foot"><span class="data-sm">/cue-flash</span><span class="label us-card__open">Open &rarr;</span></div>
       </a>
       <a class="us-card" href="/tern-amb-mixer/">
+        <img class="us-card__logo" src="/assets/logos/mark-on-dark.svg" alt="" width="48" height="40">
         <h2 class="us-card__title">Tern Amb Mixer</h2>
         <p class="us-card__body">Mixing generator for terminal ambient sounds.</p>
         <div class="us-card__foot"><span class="data-sm">/tern-amb-mixer</span><span class="label us-card__open">Open &rarr;</span></div>
       </a>
       <a class="us-card" href="/techdesk/">
+        <img class="us-card__logo" src="/assets/logos/techdesk-mark-on-dark.svg" alt="" width="48" height="40">
         <h2 class="us-card__title">Tech Desk</h2>
         <p class="us-card__body">Production management for theater technical directors — schedule, rosters, props, audio plots and cues for each show.</p>
         <div class="us-card__foot"><span class="data-sm">/techdesk</span><span class="label us-card__open">Open &rarr;</span></div>
